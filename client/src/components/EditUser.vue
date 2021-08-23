@@ -1,19 +1,21 @@
 <template>
 <div>
-    <h1>Edit User</h1>
+    <h1>Movie</h1>
     <form v-on:submit.prevent = "editUser">
-        <p>name: <input type="text" v-model="user.name"></p>
-        <p>lastname: <input type="text" v-model="user.lastname"></p>
-        <p>email: <input type="text" v-model="user.email"></p>
-        <p>password: <input type="text" v-model="user.password"></p>
+        <p>ชื่อภาพยนตร์: <input type="text" v-model="user.name"></p>
+        <p>-: <input type="text" v-model="user.lastname"></p>
+        <p>รอบ Movie: <input type="text" v-model="user.email"></p>
+        <p>เลขที่นั่ง: <input type="text" v-model="user.password"></p>
+        
+       
         <p><button type="submit">edit user</button></p>
     </form>
     <hr>
     <div>
-        <p>name: {{user.name}}</p>
-        <p>lastname: {{user.lastname}}</p>
-        <p>email: {{user.email}}</p>
-        <p>password: {{user.password}}</p>
+        <p>ชื่อภาพยนตร์: {{user.name}}</p>
+        <p>-: {{user.lastname}}</p>
+        <p>รอบ Movie: {{user.email}}</p>
+        <p>เลขที่นั่ง: {{user.password}}</p>
     </div>
 </div>
 </template>

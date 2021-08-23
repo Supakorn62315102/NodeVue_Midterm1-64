@@ -1,18 +1,20 @@
 <template>
   <div>
-    <h1>Get All Users</h1>
+    <h1>Movie</h1>
     <div v-if="users.length">
-      <h4>จำนวนผู้ใช้งาน {{ users.length }}</h4>
+      <h4>จำนวนผู้เข้าชม {{ users.length }}</h4>
       <p>
         <button v-on:click="navigateTo('/user/create')">
-            สร้างผู้ใช้งาน
+            เพิ่มผู้เข้าชม
           </button>
       </p>
       <div v-for="user in users" v-bind:key="user.id">
         <p>id: {{ user.id }}</p>
-        <p>ชื่อ-นามสกุล: {{ user.name }} - {{ user.lastname }}</p>
-        <p>Email: {{ user.email }}</p>
-        <p>Password: {{ user.password }}</p>
+        <p>ชื่อภาพยนตร์: {{ user.name }} - {{ user.lastname }}</p>
+        <p>รอบ Movie: {{ user.email }}</p>
+        <p>เลขที่นั่ง: {{ user.password }}</p>
+        
+        
         <p>
           <button v-on:click="navigateTo('/user/' + user.id)">
             ดูข้อมูลผู้ใช้
